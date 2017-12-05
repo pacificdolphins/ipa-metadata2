@@ -1,4 +1,7 @@
-# ipa-metadata [![Build Status](http://img.shields.io/travis/matiassingers/ipa-metadata.svg?style=flat-square)](https://travis-ci.org/matiassingers/ipa-metadata) [![Dependency Status](http://img.shields.io/gemnasium/matiassingers/ipa-metadata.svg?style=flat-square)](https://gemnasium.com/matiassingers/ipa-metadata) [![Coverage Status](http://img.shields.io/coveralls/matiassingers/ipa-metadata.svg?style=flat-square)](https://coveralls.io/r/matiassingers/ipa-metadata)
+# ipa-metadata2
+
+**Fork from https://github.com/matiassingers/ipa-metadata** (The origin seems no longer updated.)
+
 > extract metadata and provisioning information about an .ipa file
 
 Inspired by the `ipa info` in [`shenzhen`](https://github.com/nomad/shenzhen/blob/master/lib/shenzhen/commands/info.rb), but I wanted more general metadata information about the `.ipa`.
@@ -10,21 +13,17 @@ The CLI is very useful for quickly checking the entitlements of an `.ipa` file (
 
 See ["Checking the Entitlements of an .ipa file"](https://developer.apple.com/library/ios/qa/qa1798/_index.html#//apple_ref/doc/uid/DTS40014167-CH1-INSPECT_IPA) for more information
 
-**Note:** the severe lack of naming convention in the properties, I'm preserving their original naming - see [#7](https://github.com/matiassingers/ipa-metadata/issues/7).
-
-**Note:** the parsing of entitlements only works on OS X because of [`codesign`], provisioning profiles will still be parsed correctly.
-
 ## Install
 
 ```sh
-$ npm install --save ipa-metadata
+$ npm install --save ipa-metadata2
 ```
 
 
 ## Usage
 
 ```js
-var ipaMetadata = require('ipa-metadata');
+var ipaMetadata = require('ipa-metadata2');
 
 ipaMetadata('Facebook.ipa', function(error, data){
   console.log(data);
@@ -45,7 +44,7 @@ ipaMetadata('Facebook.ipa', function(error, data){
 ## CLI
 
 ```sh
-$ npm install --global ipa-metadata
+$ npm install --global ipa-metadata2
 ```
 
 ```sh
